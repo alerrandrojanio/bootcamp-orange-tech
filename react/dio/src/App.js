@@ -1,12 +1,25 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+import Home from "./pages/home";
+import Login from "./pages/login";
+
 import Button from "./components/Button";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Olá React</h1>
-      <Button title='Entrar' />
-      <Button title='Fechar'/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 
